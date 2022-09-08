@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:shop_app/widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,8 +9,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final TextTheme textTheme = Theme.of(context).textTheme;
-    int _selectedIndex = 2;
+    int selectedIndex = 2;
 
     return Scaffold(
       appBar: AppBar(
@@ -53,11 +51,11 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             const SizedBox(height: 30),
             Container(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               width: size.width,
               height: size.height - 210,
               decoration: BoxDecoration(
-                  color: Color.fromRGBO(211, 199, 199, 0.2),
+                  color: const Color.fromRGBO(211, 199, 199, 0.2),
                   borderRadius: BorderRadius.circular(28.0)),
               child: Column(children: const [
                 _cardItem(
@@ -106,7 +104,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavShop(selectedIndex: _selectedIndex),
+      bottomNavigationBar: BottomNavShop(selectedIndex: selectedIndex),
     );
   }
 }
@@ -193,9 +191,9 @@ class _cardItemState extends State<_cardItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(14),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-          color: Color(0XFFFDFDFD), borderRadius: BorderRadius.circular(16.0)),
+          color: const Color(0XFFFDFDFD), borderRadius: BorderRadius.circular(16.0)),
       height: 129,
       child: Row(
         children: [
@@ -209,7 +207,7 @@ class _cardItemState extends State<_cardItem> {
               image: AssetImage(widget.imageItem),
             ),
           ),
-          SizedBox(width: 23),
+          const SizedBox(width: 23),
           Container(
             width: 140,
             child: Column(
@@ -281,7 +279,7 @@ class _cardItemState extends State<_cardItem> {
                     )),
               ),
               Text(
-                '${itemQty}',
+                '$itemQty',
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,

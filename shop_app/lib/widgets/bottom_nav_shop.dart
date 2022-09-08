@@ -4,14 +4,14 @@ class BottomNavShop extends StatelessWidget {
   const BottomNavShop({
     Key? key,
     required int selectedIndex,
-  }) : _selectedIndex = selectedIndex, super(key: key);
+  }) : selectedIndex = selectedIndex, super(key: key);
 
-  final int _selectedIndex;
+  final int selectedIndex;
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-      backgroundColor: Color(0XFFF8F8F8),
+      backgroundColor: const Color(0XFFF8F8F8),
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
@@ -30,9 +30,9 @@ class BottomNavShop extends StatelessWidget {
           label: '',
         ),
       ],
-      currentIndex: _selectedIndex,
-      selectedItemColor: Color(0XFFEA001B),
-      unselectedItemColor: Color(0XFF8B8B94),
+      currentIndex: selectedIndex,
+      selectedItemColor: const Color(0XFFEA001B),
+      unselectedItemColor: const Color(0XFF8B8B94),
     );
   }
 }

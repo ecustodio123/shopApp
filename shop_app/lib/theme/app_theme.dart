@@ -17,7 +17,7 @@ class AppTheme {
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w600,
               fontSize: 20)),
-      scaffoldBackgroundColor: Color(0XFFF8F8F8),
+      scaffoldBackgroundColor: const Color(0XFFF8F8F8),
 
       // //ElevatedButton
       // elevatedButtonTheme: ElevatedButtonThemeData(
