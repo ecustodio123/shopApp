@@ -7,6 +7,7 @@ class AppRoutes {
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
 
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'cart' : (BuildContext context) => CartScreen()});
     appRoutes.addAll({'home' : (BuildContext context) => HomeScreen()});
 
     // for (final option in menuOptions) {
