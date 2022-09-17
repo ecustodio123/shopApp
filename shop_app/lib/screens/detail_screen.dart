@@ -11,7 +11,7 @@ class DetailScreen extends StatefulWidget {
 class _DetailScreenState extends State<DetailScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    int selectedIndex = 0;
+    int selectedIndex = 3;
 
     return Scaffold(
       appBar: AppBar(
