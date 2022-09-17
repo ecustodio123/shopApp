@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/screens.dart';
 
 class BottomNavShop extends StatelessWidget {
   const BottomNavShop({
     Key? key,
     required int selectedIndex,
-  }) : selectedIndex = selectedIndex, super(key: key);
+  })  : selectedIndex = selectedIndex,
+        super(key: key);
 
   final int selectedIndex;
 
@@ -12,21 +14,50 @@ class BottomNavShop extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       backgroundColor: const Color(0XFFF8F8F8),
-      items: const <BottomNavigationBarItem>[
+      items: <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: InkWell(
+            child: Icon(Icons.home),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScreen()),
+              );
+            },
+          ),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.apps_outlined),
+          icon: InkWell(
+              child: Icon(Icons.apps_outlined),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeTwoScreen()),
+                );
+              }),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined),
+          icon: InkWell(
+              child: Icon(Icons.shopping_cart_outlined),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CartScreen()),
+                );
+              }),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_add_alt_outlined),
+          icon: InkWell(
+              child: Icon(Icons.person_add_alt_outlined),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => DetailScreen()),
+                );
+              }),
           label: '',
         ),
       ],
